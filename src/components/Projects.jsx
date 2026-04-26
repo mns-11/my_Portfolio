@@ -26,7 +26,7 @@ const projects = [
         tags: ["Flutter", "Dart"],
         color: "bg-accent-coral/10 text-accent-coral",
         image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=600",
-        github: "https://github.com/mns-11/my_tasks"
+        github: "https://github.com/mns-11/my_task"
     }
 
 ];
@@ -99,10 +99,15 @@ const Projects = () => {
                                 <p className="text-gray-600 mb-6 line-clamp-2">
                                     {project.desc}
                                 </p>
-                                <button className="text-primary font-bold flex items-center group-hover:-translate-x-2 transition-transform">
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-primary font-bold flex items-center group-hover:-translate-x-2 transition-transform hover:underline"
+                                >
                                     <ArrowLeft size={16} className="ml-1" />
                                     عرض المزيد
-                                </button>
+                                </a>
                             </div>
                         </motion.div>
                     ))}
